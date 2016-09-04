@@ -60,7 +60,7 @@ namespace NewAgeLauncher
             }
             else
             {
-                Opacity = 1.00;
+                Opacity = 0.90;
             }
 
         }
@@ -945,7 +945,8 @@ namespace NewAgeLauncher
 
         private void aboutUsButtonPictureBox_Click(object sender, EventArgs e)
         {
-            Process.Start("http://wownewage.com/");
+            AboutWindow about = new AboutWindow();
+            about.ShowDialog();
         }
 
         private void donateButtonPictureBox_MouseMove(object sender, MouseEventArgs e)

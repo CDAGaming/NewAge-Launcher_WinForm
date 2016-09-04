@@ -25,6 +25,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using Squirrel;
+using System.Threading.Tasks;
 
 namespace NewAgeLauncher
 {
@@ -34,7 +35,7 @@ namespace NewAgeLauncher
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static async void Main()
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -46,13 +47,68 @@ namespace NewAgeLauncher
             Settings.Default.CurrentVersion = CurrentVersion;
             Settings.Default.Save();
 
-            // Runs & Checks for Update
+            ///* Use this Tag for Debugging
+            Task.Run(async () =>
+             {
+                 if (Settings.Default.CheckforUpdateTag == true)
+                 {
+                     using (var updater = await UpdateManager.GitHubUpdateManager("https://github.com/CDAGaming/NewAge-Launcher_WinForm"))
+                     {
+                         if (Settings.Default.UpdatePGShow == false && Settings.Default.CheckforUpdateTag == true)
+                         {
+                             var UpdateCheck = await updater.CheckForUpdate();
 
-            if (Settings.Default.CheckforUpdateTag == true)
-            {
+                             if (UpdateCheck.ReleasesToApply.Any())
+                             {
+                                 Settings.Default.UpdateAvailable = true;
+                                 Settings.Default.UpdatePGShow = true;
 
-            }
-            
+                                 string FutureVersion = UpdateCheck.FutureReleaseEntry.Version.ToString();
+                                 Settings.Default.FutureVersion = FutureVersion;
+                                 Settings.Default.Save();
+                             }
+                         }
+                         else if (Settings.Default.UpdatePGShow == true && Settings.Default.CheckforUpdateTag == true)
+                         {
+                             var UpdateCheck = await updater.CheckForUpdate();
+
+                             if (UpdateCheck.ReleasesToApply.Any())
+                             {
+                                 string UpdateMSG = "Update Available:" + "(" + Settings.Default.CurrentVersion + ">" + Settings.Default.FutureVersion + ")";
+                                 Settings.Default.UpdateAvailable = true;
+                                 Settings.Default.UpdateMessage = UpdateMSG;
+                                 Settings.Default.Save();
+
+                                 UpdateWindow UpdatePG = new UpdateWindow();
+                                 UpdatePG.ShowDialog();
+
+                                 if (Settings.Default.UpdateAccepted == true && Settings.Default.UpdatePostPoned == false)
+                                 {
+                                     await updater.ApplyReleases(UpdateCheck);
+
+                                     Application.Restart();
+                                 }
+                                 else if (Settings.Default.UpdateAccepted == false && Settings.Default.UpdatePostPoned == true)
+                                 {
+                                     MessageBox.Show("You Will be Reminded On Next Reboot of Launcher");
+                                 }
+
+                             }
+                         }
+                         else if (Settings.Default.UpdatePGShow == false && Settings.Default.CheckforUpdateTag == false)
+                         {
+                             // Do Nothing in Startup Event
+                         }
+                         else if (Settings.Default.UpdatePGShow == true && Settings.Default.CheckforUpdateTag == false)
+                         {
+                             UpdateWindow UpdatePG = new UpdateWindow();
+                             UpdatePG.ShowDialog();
+                         }
+                     }
+                 }
+             }).Wait();
+
+            // Debug END */
 
         }
     }

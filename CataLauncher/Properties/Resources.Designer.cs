@@ -113,9 +113,19 @@ namespace NewAgeLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cancel_NEW_ {
+        internal static System.Drawing.Bitmap Cancel_NEW {
             get {
-                object obj = ResourceManager.GetObject("Cancel(NEW)", resourceCulture);
+                object obj = ResourceManager.GetObject("Cancel_NEW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CataLogo {
+            get {
+                object obj = ResourceManager.GetObject("CataLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -157,6 +167,39 @@ namespace NewAgeLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("Deathwing2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DeltaCompressionDotNet {
+            get {
+                object obj = ResourceManager.GetObject("DeltaCompressionDotNet", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;doc&gt;
+        ///    &lt;assembly&gt;
+        ///        &lt;name&gt;DeltaCompressionDotNet&lt;/name&gt;
+        ///    &lt;/assembly&gt;
+        ///    &lt;members&gt;
+        ///        &lt;member name=&quot;T:DeltaCompressionDotNet.MsDelta.ApplyFlags&quot;&gt;
+        ///            &lt;remarks&gt;
+        ///                http://msdn.microsoft.com/en-us/library/bb417345.aspx#deltaflagtypeflags
+        ///            &lt;/remarks&gt;
+        ///        &lt;/member&gt;
+        ///        &lt;member name=&quot;F:DeltaCompressionDotNet.MsDelta.ApplyFlags.None&quot;&gt;
+        ///            &lt;summary&gt;Indicates no special handling.&lt;/summary&gt;
+        ///        &lt;/member&gt;
+        ///         [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DeltaCompressionDotNet1 {
+            get {
+                return ResourceManager.GetString("DeltaCompressionDotNet1", resourceCulture);
             }
         }
         
@@ -281,6 +324,38 @@ namespace NewAgeLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ICSharpCode_SharpZipLib {
+            get {
+                object obj = ResourceManager.GetObject("ICSharpCode_SharpZipLib", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;doc&gt;
+        ///    &lt;assembly&gt;
+        ///        &lt;name&gt;ICSharpCode.SharpZipLib&lt;/name&gt;
+        ///    &lt;/assembly&gt;
+        ///    &lt;members&gt;
+        ///        &lt;member name=&quot;T:ICSharpCode.SharpZipLib.Core.WindowsPathUtils&quot;&gt;
+        ///            &lt;summary&gt;
+        ///            WindowsPathUtils provides simple utilities for handling windows paths.
+        ///            &lt;/summary&gt;
+        ///        &lt;/member&gt;
+        ///        &lt;member name=&quot;M:ICSharpCode.SharpZipLib.Core.WindowsPathUtils.#ctor&quot;&gt;
+        ///            &lt;summary&gt;
+        ///            Initializes a new instance of the &lt;see cref=&quot;T:ICSh [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ICSharpCode_SharpZipLib1 {
+            get {
+                return ResourceManager.GetString("ICSharpCode_SharpZipLib1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap LauncherMenuBar {
@@ -323,6 +398,16 @@ namespace NewAgeLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo2 {
+            get {
+                object obj = ResourceManager.GetObject("logo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MinimizeButton {
             get {
                 object obj = ResourceManager.GetObject("MinimizeButton", resourceCulture);
@@ -347,6 +432,66 @@ namespace NewAgeLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("MinimizeButtonPress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mono_Cecil {
+            get {
+                object obj = ResourceManager.GetObject("Mono_Cecil", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mono_Cecil_Mdb {
+            get {
+                object obj = ResourceManager.GetObject("Mono_Cecil_Mdb", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mono_Cecil_Pdb {
+            get {
+                object obj = ResourceManager.GetObject("Mono_Cecil_Pdb", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mono_Cecil_Rocks {
+            get {
+                object obj = ResourceManager.GetObject("Mono_Cecil_Rocks", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] NuGet_Squirrel {
+            get {
+                object obj = ResourceManager.GetObject("NuGet_Squirrel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] NuGet_Squirrel1 {
+            get {
+                object obj = ResourceManager.GetObject("NuGet_Squirrel1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -477,6 +622,46 @@ namespace NewAgeLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("SmallButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Splat {
+            get {
+                object obj = ResourceManager.GetObject("Splat", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Splat1 {
+            get {
+                object obj = ResourceManager.GetObject("Splat1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Squirrel {
+            get {
+                object obj = ResourceManager.GetObject("Squirrel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Squirrel1 {
+            get {
+                object obj = ResourceManager.GetObject("Squirrel1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

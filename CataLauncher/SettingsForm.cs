@@ -59,6 +59,7 @@ namespace NewAgeLauncher
             WoWCache_CheckBox.Checked = Settings.Default.WoWCacheToggle;
             Language_Checkbox.Checked = Settings.Default.LanguageChangeTag;
             Font_Checkbox.Checked = Settings.Default.FontAdditionTag;
+            UpdateCheckbox.Checked = Settings.Default.CheckforUpdateTag;
         }
 
         private void exitPictureBox_MouseDown(object sender, MouseEventArgs e)
@@ -207,6 +208,17 @@ namespace NewAgeLauncher
             else
             {
                 Settings.Default.FontAdditionTag = false;
+            }
+
+            //Update Checkbox
+
+            if (UpdateCheckbox.Checked)
+            {
+                Settings.Default.CheckforUpdateTag = true;
+            }
+            else
+            {
+                Settings.Default.CheckforUpdateTag = false;
             }
 
 

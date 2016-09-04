@@ -241,5 +241,65 @@ namespace NewAgeLauncher.Properties {
                 this["CheckforUpdateTag"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UpdatePGShow {
+            get {
+                return ((bool)(this["UpdatePGShow"]));
+            }
+            set {
+                this["UpdatePGShow"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UpdateAvailable {
+            get {
+                return ((bool)(this["UpdateAvailable"]));
+            }
+            set {
+                this["UpdateAvailable"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UpdateAccepted {
+            get {
+                return ((bool)(this["UpdateAccepted"]));
+            }
+            set {
+                this["UpdateAccepted"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UpdatePostPoned {
+            get {
+                return ((bool)(this["UpdatePostPoned"]));
+            }
+            set {
+                this["UpdatePostPoned"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UpdateMessage {
+            get {
+                return ((string)(this["UpdateMessage"]));
+            }
+            set {
+                this["UpdateMessage"] = value;
+            }
+        }
     }
 }
