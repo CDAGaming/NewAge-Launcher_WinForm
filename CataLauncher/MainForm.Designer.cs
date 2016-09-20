@@ -57,7 +57,6 @@
             this.UpdateBox5 = new System.Windows.Forms.PictureBox();
             this.Item1_Description = new System.Windows.Forms.Label();
             this.Item2_Description = new System.Windows.Forms.Label();
-            this.Item3_Description = new System.Windows.Forms.Label();
             this.Item4_Description = new System.Windows.Forms.Label();
             this.UpdateBox4 = new System.Windows.Forms.PictureBox();
             this.UpdateBox3 = new System.Windows.Forms.PictureBox();
@@ -72,7 +71,6 @@
             this.downloadSpeedLabel = new System.Windows.Forms.Label();
             this.ButtonsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.DownloadPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.downloadBar1 = new NewAgeLauncher.DownloadBar();
             this.CloseMinimizePanel = new System.Windows.Forms.TableLayoutPanel();
             this.DownloadTextPanel = new System.Windows.Forms.TableLayoutPanel();
             this.LogoPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -90,7 +88,9 @@
             this.UpdatePanel_Item4_Info = new System.Windows.Forms.TableLayoutPanel();
             this.UpdatePanel_Item5_Info = new System.Windows.Forms.TableLayoutPanel();
             this.UpdatePanel_Item6_Info = new System.Windows.Forms.TableLayoutPanel();
+            this.downloadBar1 = new NewAgeLauncher.DownloadBar();
             this.menuBar1 = new NewAgeLauncher.MenuBar();
+            this.Item3_Description = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.playButtonPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
@@ -204,7 +204,7 @@
             // 
             this.downloadProgressLabel.BackColor = System.Drawing.Color.Transparent;
             this.downloadProgressLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.downloadProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadProgressLabel.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downloadProgressLabel.ForeColor = System.Drawing.Color.White;
             this.downloadProgressLabel.Location = new System.Drawing.Point(3, 0);
             this.downloadProgressLabel.Name = "downloadProgressLabel";
@@ -218,11 +218,11 @@
             this.serverStatusLabel.AutoSize = true;
             this.serverStatusLabel.BackColor = System.Drawing.Color.Transparent;
             this.serverStatusLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.serverStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serverStatusLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverStatusLabel.ForeColor = System.Drawing.Color.White;
             this.serverStatusLabel.Location = new System.Drawing.Point(3, 0);
             this.serverStatusLabel.Name = "serverStatusLabel";
-            this.serverStatusLabel.Size = new System.Drawing.Size(101, 20);
+            this.serverStatusLabel.Size = new System.Drawing.Size(95, 20);
             this.serverStatusLabel.TabIndex = 10;
             this.serverStatusLabel.Text = "Server Status:";
             // 
@@ -231,13 +231,13 @@
             this.statusLabel.AutoSize = true;
             this.statusLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.statusLabel.Location = new System.Drawing.Point(110, 0);
+            this.statusLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.ForeColor = System.Drawing.Color.Gray;
+            this.statusLabel.Location = new System.Drawing.Point(104, 0);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(54, 20);
+            this.statusLabel.Size = new System.Drawing.Size(60, 20);
             this.statusLabel.TabIndex = 11;
-            this.statusLabel.Text = "Online";
+            this.statusLabel.Text = "Waiting";
             this.statusLabel.Click += new System.EventHandler(this.statusLabel_Click);
             // 
             // checkServerStatusBackgroundWorker
@@ -248,7 +248,7 @@
             // 
             this.playButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.playButtonPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.playButtonPictureBox.Image = global::NewAgeLauncher.Resources_US.Play_NoHovor2;
+            this.playButtonPictureBox.Image = global::NewAgeLauncher.Properties.Resources.Play_NoHovor;
             this.playButtonPictureBox.Location = new System.Drawing.Point(3, 3);
             this.playButtonPictureBox.Name = "playButtonPictureBox";
             this.playButtonPictureBox.Size = new System.Drawing.Size(217, 37);
@@ -299,11 +299,11 @@
             this.News_Item6_Title.AutoSize = true;
             this.News_Item6_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item6_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item6_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.News_Item6_Title.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.News_Item6_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item6_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item6_Title.Name = "News_Item6_Title";
-            this.News_Item6_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item6_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item6_Title.TabIndex = 65;
             this.News_Item6_Title.Text = "News_Item6_Title";
             // 
@@ -312,11 +312,11 @@
             this.News_Item5_Title.AutoSize = true;
             this.News_Item5_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item5_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item5_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.News_Item5_Title.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.News_Item5_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item5_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item5_Title.Name = "News_Item5_Title";
-            this.News_Item5_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item5_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item5_Title.TabIndex = 64;
             this.News_Item5_Title.Text = "News_Item5_Title";
             // 
@@ -325,11 +325,11 @@
             this.News_Item4_Title.AutoSize = true;
             this.News_Item4_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item4_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item4_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.News_Item4_Title.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.News_Item4_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item4_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item4_Title.Name = "News_Item4_Title";
-            this.News_Item4_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item4_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item4_Title.TabIndex = 63;
             this.News_Item4_Title.Text = "News_Item4_Title";
             // 
@@ -338,11 +338,11 @@
             this.News_Item3_Title.AutoSize = true;
             this.News_Item3_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item3_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item3_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.News_Item3_Title.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.News_Item3_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item3_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item3_Title.Name = "News_Item3_Title";
-            this.News_Item3_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item3_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item3_Title.TabIndex = 62;
             this.News_Item3_Title.Text = "News_Item3_Title";
             // 
@@ -351,11 +351,11 @@
             this.News_Item2_Title.AutoSize = true;
             this.News_Item2_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item2_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item2_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.News_Item2_Title.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.News_Item2_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item2_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item2_Title.Name = "News_Item2_Title";
-            this.News_Item2_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item2_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item2_Title.TabIndex = 61;
             this.News_Item2_Title.Text = "News_Item2_Title";
             // 
@@ -364,11 +364,11 @@
             this.News_Item1_Title.AutoSize = true;
             this.News_Item1_Title.BackColor = System.Drawing.Color.Transparent;
             this.News_Item1_Title.Dock = System.Windows.Forms.DockStyle.Left;
-            this.News_Item1_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.News_Item1_Title.Font = new System.Drawing.Font("Montserrat", 12F);
             this.News_Item1_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(204)))), ((int)(((byte)(223)))));
             this.News_Item1_Title.Location = new System.Drawing.Point(3, 0);
             this.News_Item1_Title.Name = "News_Item1_Title";
-            this.News_Item1_Title.Size = new System.Drawing.Size(152, 23);
+            this.News_Item1_Title.Size = new System.Drawing.Size(155, 23);
             this.News_Item1_Title.TabIndex = 60;
             this.News_Item1_Title.Text = "News_Item1_Title";
             // 
@@ -376,11 +376,11 @@
             // 
             this.Item6_Description.BackColor = System.Drawing.Color.Transparent;
             this.Item6_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item6_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item6_Description.ForeColor = System.Drawing.Color.Silver;
+            this.Item6_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item6_Description.ForeColor = System.Drawing.Color.White;
             this.Item6_Description.Location = new System.Drawing.Point(3, 23);
             this.Item6_Description.Name = "Item6_Description";
-            this.Item6_Description.Size = new System.Drawing.Size(225, 49);
+            this.Item6_Description.Size = new System.Drawing.Size(243, 49);
             this.Item6_Description.TabIndex = 59;
             this.Item6_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
     " in the Game.";
@@ -403,11 +403,11 @@
             // 
             this.Item5_Description.BackColor = System.Drawing.Color.Transparent;
             this.Item5_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item5_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item5_Description.ForeColor = System.Drawing.Color.Silver;
+            this.Item5_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item5_Description.ForeColor = System.Drawing.Color.White;
             this.Item5_Description.Location = new System.Drawing.Point(3, 23);
             this.Item5_Description.Name = "Item5_Description";
-            this.Item5_Description.Size = new System.Drawing.Size(225, 49);
+            this.Item5_Description.Size = new System.Drawing.Size(243, 49);
             this.Item5_Description.TabIndex = 57;
             this.Item5_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
     " in the Game.";
@@ -430,11 +430,11 @@
             // 
             this.Item1_Description.BackColor = System.Drawing.Color.Transparent;
             this.Item1_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item1_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item1_Description.ForeColor = System.Drawing.Color.Silver;
+            this.Item1_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item1_Description.ForeColor = System.Drawing.Color.White;
             this.Item1_Description.Location = new System.Drawing.Point(3, 23);
             this.Item1_Description.Name = "Item1_Description";
-            this.Item1_Description.Size = new System.Drawing.Size(224, 49);
+            this.Item1_Description.Size = new System.Drawing.Size(243, 49);
             this.Item1_Description.TabIndex = 55;
             this.Item1_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
     " in the Game.";
@@ -444,39 +444,25 @@
             // 
             this.Item2_Description.BackColor = System.Drawing.Color.Transparent;
             this.Item2_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item2_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item2_Description.ForeColor = System.Drawing.Color.Silver;
+            this.Item2_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item2_Description.ForeColor = System.Drawing.Color.White;
             this.Item2_Description.Location = new System.Drawing.Point(3, 23);
             this.Item2_Description.Name = "Item2_Description";
-            this.Item2_Description.Size = new System.Drawing.Size(224, 49);
+            this.Item2_Description.Size = new System.Drawing.Size(243, 49);
             this.Item2_Description.TabIndex = 54;
             this.Item2_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
     " in the Game.";
             this.Item2_Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Item3_Description
-            // 
-            this.Item3_Description.BackColor = System.Drawing.Color.Transparent;
-            this.Item3_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item3_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item3_Description.ForeColor = System.Drawing.Color.Silver;
-            this.Item3_Description.Location = new System.Drawing.Point(3, 23);
-            this.Item3_Description.Name = "Item3_Description";
-            this.Item3_Description.Size = new System.Drawing.Size(224, 49);
-            this.Item3_Description.TabIndex = 53;
-            this.Item3_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
-    " in the Game.";
-            this.Item3_Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Item4_Description
             // 
             this.Item4_Description.BackColor = System.Drawing.Color.Transparent;
             this.Item4_Description.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Item4_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item4_Description.ForeColor = System.Drawing.Color.Silver;
+            this.Item4_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item4_Description.ForeColor = System.Drawing.Color.White;
             this.Item4_Description.Location = new System.Drawing.Point(3, 23);
             this.Item4_Description.Name = "Item4_Description";
-            this.Item4_Description.Size = new System.Drawing.Size(225, 49);
+            this.Item4_Description.Size = new System.Drawing.Size(243, 49);
             this.Item4_Description.TabIndex = 52;
             this.Item4_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
     " in the Game.";
@@ -539,7 +525,7 @@
             // 
             this.settingsButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.settingsButtonPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.settingsButtonPictureBox.Image = global::NewAgeLauncher.Resources_US.Settings_NoHovor;
+            this.settingsButtonPictureBox.Image = global::NewAgeLauncher.Properties.Resources.Settings_NoHovor;
             this.settingsButtonPictureBox.Location = new System.Drawing.Point(3, 46);
             this.settingsButtonPictureBox.Name = "settingsButtonPictureBox";
             this.settingsButtonPictureBox.Size = new System.Drawing.Size(217, 37);
@@ -555,7 +541,7 @@
             // 
             this.donateButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.donateButtonPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.donateButtonPictureBox.Image = global::NewAgeLauncher.Resources_US.Donate_NoHovor;
+            this.donateButtonPictureBox.Image = global::NewAgeLauncher.Properties.Resources.Contribute_NoHovor;
             this.donateButtonPictureBox.Location = new System.Drawing.Point(3, 89);
             this.donateButtonPictureBox.Name = "donateButtonPictureBox";
             this.donateButtonPictureBox.Size = new System.Drawing.Size(217, 37);
@@ -571,7 +557,7 @@
             // 
             this.aboutUsButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.aboutUsButtonPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutUsButtonPictureBox.Image = global::NewAgeLauncher.Resources_US.AboutUs_NoHovor;
+            this.aboutUsButtonPictureBox.Image = global::NewAgeLauncher.Properties.Resources.AboutUs_NoHovor;
             this.aboutUsButtonPictureBox.Location = new System.Drawing.Point(3, 132);
             this.aboutUsButtonPictureBox.Name = "aboutUsButtonPictureBox";
             this.aboutUsButtonPictureBox.Size = new System.Drawing.Size(217, 37);
@@ -587,7 +573,7 @@
             // 
             this.forumButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.forumButtonPictureBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.forumButtonPictureBox.Image = global::NewAgeLauncher.Resources_US.Forum_NoHovor;
+            this.forumButtonPictureBox.Image = global::NewAgeLauncher.Properties.Resources.Forum_NoHovor;
             this.forumButtonPictureBox.Location = new System.Drawing.Point(3, 175);
             this.forumButtonPictureBox.Name = "forumButtonPictureBox";
             this.forumButtonPictureBox.Size = new System.Drawing.Size(217, 43);
@@ -604,7 +590,7 @@
             this.updatesLabel.AutoSize = true;
             this.updatesLabel.BackColor = System.Drawing.Color.Transparent;
             this.updatesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updatesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatesLabel.Font = new System.Drawing.Font("Montserrat", 14F);
             this.updatesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(208)))), ((int)(((byte)(226)))));
             this.updatesLabel.Location = new System.Drawing.Point(3, 0);
             this.updatesLabel.Name = "updatesLabel";
@@ -632,11 +618,11 @@
             this.downloadSpeedLabel.AutoSize = true;
             this.downloadSpeedLabel.BackColor = System.Drawing.Color.Transparent;
             this.downloadSpeedLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.downloadSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadSpeedLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downloadSpeedLabel.ForeColor = System.Drawing.Color.White;
-            this.downloadSpeedLabel.Location = new System.Drawing.Point(521, 0);
+            this.downloadSpeedLabel.Location = new System.Drawing.Point(516, 0);
             this.downloadSpeedLabel.Name = "downloadSpeedLabel";
-            this.downloadSpeedLabel.Size = new System.Drawing.Size(77, 24);
+            this.downloadSpeedLabel.Size = new System.Drawing.Size(82, 24);
             this.downloadSpeedLabel.TabIndex = 72;
             this.downloadSpeedLabel.Text = "0.00 KB/s";
             // 
@@ -651,7 +637,7 @@
             this.ButtonsPanel.Controls.Add(this.donateButtonPictureBox, 0, 2);
             this.ButtonsPanel.Controls.Add(this.aboutUsButtonPictureBox, 0, 3);
             this.ButtonsPanel.Controls.Add(this.forumButtonPictureBox, 0, 4);
-            this.ButtonsPanel.Location = new System.Drawing.Point(856, 180);
+            this.ButtonsPanel.Location = new System.Drawing.Point(872, 180);
             this.ButtonsPanel.Name = "ButtonsPanel";
             this.ButtonsPanel.RowCount = 5;
             this.ButtonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
@@ -675,17 +661,6 @@
             this.DownloadPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.DownloadPanel.Size = new System.Drawing.Size(608, 54);
             this.DownloadPanel.TabIndex = 74;
-            // 
-            // downloadBar1
-            // 
-            this.downloadBar1.BackColor = System.Drawing.Color.White;
-            this.downloadBar1.BarState = NewAgeLauncher.DownloadBar.DownloadBarState.Setup;
-            this.downloadBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.downloadBar1.Location = new System.Drawing.Point(3, 3);
-            this.downloadBar1.Name = "downloadBar1";
-            this.downloadBar1.Size = new System.Drawing.Size(602, 48);
-            this.downloadBar1.TabIndex = 19;
-            this.downloadBar1.Value = 0D;
             // 
             // CloseMinimizePanel
             // 
@@ -852,7 +827,7 @@
             this.UpdatePanel_Item1_Info.RowCount = 2;
             this.UpdatePanel_Item1_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item1_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item1_Info.Size = new System.Drawing.Size(233, 72);
+            this.UpdatePanel_Item1_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item1_Info.TabIndex = 86;
             // 
             // UpdatePanel_Item2_Info
@@ -867,7 +842,7 @@
             this.UpdatePanel_Item2_Info.RowCount = 2;
             this.UpdatePanel_Item2_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item2_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item2_Info.Size = new System.Drawing.Size(235, 72);
+            this.UpdatePanel_Item2_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item2_Info.TabIndex = 87;
             // 
             // UpdatePanel_Item3_Info
@@ -882,11 +857,12 @@
             this.UpdatePanel_Item3_Info.RowCount = 2;
             this.UpdatePanel_Item3_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item3_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item3_Info.Size = new System.Drawing.Size(235, 72);
+            this.UpdatePanel_Item3_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item3_Info.TabIndex = 88;
             // 
             // UpdatePanel_Item4_Info
             // 
+            this.UpdatePanel_Item4_Info.AutoScroll = true;
             this.UpdatePanel_Item4_Info.BackColor = System.Drawing.Color.Transparent;
             this.UpdatePanel_Item4_Info.ColumnCount = 1;
             this.UpdatePanel_Item4_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -897,7 +873,7 @@
             this.UpdatePanel_Item4_Info.RowCount = 2;
             this.UpdatePanel_Item4_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item4_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item4_Info.Size = new System.Drawing.Size(235, 72);
+            this.UpdatePanel_Item4_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item4_Info.TabIndex = 89;
             // 
             // UpdatePanel_Item5_Info
@@ -912,7 +888,7 @@
             this.UpdatePanel_Item5_Info.RowCount = 2;
             this.UpdatePanel_Item5_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item5_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item5_Info.Size = new System.Drawing.Size(235, 72);
+            this.UpdatePanel_Item5_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item5_Info.TabIndex = 90;
             // 
             // UpdatePanel_Item6_Info
@@ -927,8 +903,19 @@
             this.UpdatePanel_Item6_Info.RowCount = 2;
             this.UpdatePanel_Item6_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UpdatePanel_Item6_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.UpdatePanel_Item6_Info.Size = new System.Drawing.Size(235, 72);
+            this.UpdatePanel_Item6_Info.Size = new System.Drawing.Size(249, 72);
             this.UpdatePanel_Item6_Info.TabIndex = 91;
+            // 
+            // downloadBar1
+            // 
+            this.downloadBar1.BackColor = System.Drawing.Color.White;
+            this.downloadBar1.BarState = NewAgeLauncher.DownloadBar.DownloadBarState.Setup;
+            this.downloadBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.downloadBar1.Location = new System.Drawing.Point(3, 3);
+            this.downloadBar1.Name = "downloadBar1";
+            this.downloadBar1.Size = new System.Drawing.Size(602, 48);
+            this.downloadBar1.TabIndex = 19;
+            this.downloadBar1.Value = 0D;
             // 
             // menuBar1
             // 
@@ -936,7 +923,7 @@
             this.menuBar1.ButtonColor = System.Drawing.Color.White;
             this.menuBar1.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.menuBar1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBar1.ForeColor = System.Drawing.Color.Transparent;
             this.menuBar1.Location = new System.Drawing.Point(0, 0);
             this.menuBar1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -947,6 +934,20 @@
             this.menuBar1.TabIndex = 18;
             this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
             this.menuBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuBar1_MouseDown);
+            // 
+            // Item3_Description
+            // 
+            this.Item3_Description.BackColor = System.Drawing.Color.Transparent;
+            this.Item3_Description.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Item3_Description.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item3_Description.ForeColor = System.Drawing.Color.White;
+            this.Item3_Description.Location = new System.Drawing.Point(3, 23);
+            this.Item3_Description.Name = "Item3_Description";
+            this.Item3_Description.Size = new System.Drawing.Size(243, 49);
+            this.Item3_Description.TabIndex = 53;
+            this.Item3_Description.Text = "This is a Test Paragraph, It Shows a Summary\r\nof What Upcoming Changes or Updates" +
+    " in the Game.";
+            this.Item3_Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainForm
             // 
@@ -1067,7 +1068,6 @@
         private System.Windows.Forms.PictureBox UpdateBox5;
         private System.Windows.Forms.Label Item1_Description;
         private System.Windows.Forms.Label Item2_Description;
-        private System.Windows.Forms.Label Item3_Description;
         private System.Windows.Forms.Label Item4_Description;
         private System.Windows.Forms.PictureBox UpdateBox4;
         private System.Windows.Forms.PictureBox UpdateBox3;
@@ -1095,6 +1095,7 @@
         private System.Windows.Forms.TableLayoutPanel UpdatePanel_Item4_Info;
         private System.Windows.Forms.TableLayoutPanel UpdatePanel_Item5_Info;
         private System.Windows.Forms.TableLayoutPanel UpdatePanel_Item6_Info;
+        private System.Windows.Forms.Label Item3_Description;
     }
 }
 

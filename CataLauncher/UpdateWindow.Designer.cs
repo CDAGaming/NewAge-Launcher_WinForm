@@ -46,11 +46,11 @@
             // UpdateMSGlbl
             // 
             this.UpdateMSGlbl.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateMSGlbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateMSGlbl.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.UpdateMSGlbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.UpdateMSGlbl.Location = new System.Drawing.Point(12, 34);
+            this.UpdateMSGlbl.Location = new System.Drawing.Point(0, 34);
             this.UpdateMSGlbl.Name = "UpdateMSGlbl";
-            this.UpdateMSGlbl.Size = new System.Drawing.Size(316, 30);
+            this.UpdateMSGlbl.Size = new System.Drawing.Size(417, 30);
             this.UpdateMSGlbl.TabIndex = 7;
             this.UpdateMSGlbl.Text = "No Update Available (VX.X.X.X)";
             this.UpdateMSGlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +62,7 @@
             this.menuBar1.Location = new System.Drawing.Point(0, 0);
             this.menuBar1.MenuBarText = "NewAge - Updates";
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(341, 31);
+            this.menuBar1.Size = new System.Drawing.Size(420, 31);
             this.menuBar1.TabIndex = 0;
             // 
             // webBrowser1
@@ -70,13 +70,13 @@
             this.webBrowser1.Location = new System.Drawing.Point(15, 65);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(313, 294);
+            this.webBrowser1.Size = new System.Drawing.Size(393, 294);
             this.webBrowser1.TabIndex = 8;
             this.webBrowser1.Url = new System.Uri("http://wownewage.com/Launcher_Changes.html", System.UriKind.Absolute);
             // 
             // ContinueorRestartButton
             // 
-            this.ContinueorRestartButton.Location = new System.Drawing.Point(241, 365);
+            this.ContinueorRestartButton.Location = new System.Drawing.Point(321, 363);
             this.ContinueorRestartButton.Name = "ContinueorRestartButton";
             this.ContinueorRestartButton.Size = new System.Drawing.Size(87, 30);
             this.ContinueorRestartButton.TabIndex = 9;
@@ -85,7 +85,7 @@
             // 
             // PostponeButton
             // 
-            this.PostponeButton.Location = new System.Drawing.Point(148, 365);
+            this.PostponeButton.Location = new System.Drawing.Point(228, 363);
             this.PostponeButton.Name = "PostponeButton";
             this.PostponeButton.Size = new System.Drawing.Size(87, 30);
             this.PostponeButton.TabIndex = 10;
@@ -101,7 +101,7 @@
             this.CloseMinimizePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.CloseMinimizePanel.Controls.Add(this.MinimizePictureBox, 0, 0);
             this.CloseMinimizePanel.Controls.Add(this.exitPictureBox, 1, 0);
-            this.CloseMinimizePanel.Location = new System.Drawing.Point(285, 4);
+            this.CloseMinimizePanel.Location = new System.Drawing.Point(365, 4);
             this.CloseMinimizePanel.Name = "CloseMinimizePanel";
             this.CloseMinimizePanel.RowCount = 1;
             this.CloseMinimizePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -140,7 +140,7 @@
             this.StartupCheckbox.ForeColor = System.Drawing.Color.White;
             this.StartupCheckbox.Location = new System.Drawing.Point(15, 369);
             this.StartupCheckbox.Name = "StartupCheckbox";
-            this.StartupCheckbox.Size = new System.Drawing.Size(112, 24);
+            this.StartupCheckbox.Size = new System.Drawing.Size(153, 24);
             this.StartupCheckbox.TabIndex = 78;
             this.StartupCheckbox.Text = "Show on Startup";
             this.StartupCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +154,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::NewAgeLauncher.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(340, 400);
+            this.ClientSize = new System.Drawing.Size(420, 400);
             this.Controls.Add(this.StartupCheckbox);
             this.Controls.Add(this.CloseMinimizePanel);
             this.Controls.Add(this.PostponeButton);

@@ -43,73 +43,99 @@ namespace NewAgeLauncher
 
             // Sets Current Version (For Use in Update Window & About)
 
-            string CurrentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            Settings.Default.CurrentVersion = CurrentVersion;
-            Settings.Default.Save();
+            Version CurrentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+            //Settings.Default.CurrentVersion = CurrentVersion;
+            //Settings.Default.Save();
+
+            if (Settings.Default.UpdatePostPoned == true)
+            {
+                Settings.Default.UpdatePostPoned = false;
+                Settings.Default.Save();
+            }
 
             ///* Use this Tag for Debugging
             Task.Run(async () =>
              {
-                 if (Settings.Default.CheckforUpdateTag == true)
+                 if (Settings.Default.CheckforUpdateTag == true && Settings.Default.UpdatePGShow == true)
                  {
+
                      using (var updater = await UpdateManager.GitHubUpdateManager("https://github.com/CDAGaming/NewAge-Launcher_WinForm"))
                      {
-                         if (Settings.Default.UpdatePGShow == false && Settings.Default.CheckforUpdateTag == true)
+                         var updatecheck = await updater.CheckForUpdate();
+
+                         if (updatecheck.ReleasesToApply.Any())
                          {
-                             var UpdateCheck = await updater.CheckForUpdate();
+                             string FutureVersion = updatecheck.FutureReleaseEntry.Version.ToString();
+                             Version FutureVer = Version.Parse(FutureVersion);
+                             Settings.Default.FutureVersion = FutureVersion;
+                             Settings.Default.Save();
 
-                             if (UpdateCheck.ReleasesToApply.Any())
+                             if (CurrentVersion < FutureVer)
                              {
-                                 Settings.Default.UpdateAvailable = true;
-                                 Settings.Default.UpdatePGShow = true;
-
-                                 string FutureVersion = UpdateCheck.FutureReleaseEntry.Version.ToString();
-                                 Settings.Default.FutureVersion = FutureVersion;
-                                 Settings.Default.Save();
-                             }
-                         }
-                         else if (Settings.Default.UpdatePGShow == true && Settings.Default.CheckforUpdateTag == true)
-                         {
-                             var UpdateCheck = await updater.CheckForUpdate();
-
-                             if (UpdateCheck.ReleasesToApply.Any())
-                             {
-                                 string UpdateMSG = "Update Available:" + "(" + Settings.Default.CurrentVersion + ">" + Settings.Default.FutureVersion + ")";
-                                 Settings.Default.UpdateAvailable = true;
+                                 string UpdateMSG = "An Update is Available: " + " ( " + CurrentVersion + " > " + FutureVersion + " ) ";
+                                 UpdateMSG.Replace(",", ".");
                                  Settings.Default.UpdateMessage = UpdateMSG;
+                                 Settings.Default.UpdateAvailable = true;
                                  Settings.Default.Save();
-
-                                 UpdateWindow UpdatePG = new UpdateWindow();
-                                 UpdatePG.ShowDialog();
 
                                  if (Settings.Default.UpdateAccepted == true && Settings.Default.UpdatePostPoned == false)
                                  {
-                                     await updater.ApplyReleases(UpdateCheck);
+                                     await updater.ApplyReleases(updatecheck);
 
-                                     Application.Restart();
+                                     Settings.Default.UpdateAccepted = false;
+                                     Settings.Default.Save();
                                  }
                                  else if (Settings.Default.UpdateAccepted == false && Settings.Default.UpdatePostPoned == true)
                                  {
-                                     MessageBox.Show("You Will be Reminded On Next Reboot of Launcher");
+                                     
                                  }
-
                              }
+                             else if (CurrentVersion == FutureVer)
+                             {
+                                 string UpdateMSG = "Already Up-To-Date :D" + " ( " + CurrentVersion + " ) ";
+                                 UpdateMSG.Replace(",", ".");
+                                 Settings.Default.UpdateMessage = UpdateMSG;
+                                 Settings.Default.UpdateAvailable = false;
+                                 Settings.Default.Save();
+                             }
+                             else if (CurrentVersion > FutureVer)
+                             {
+                                 string UpdateMSG = "Already Up-To-Date :D" + " ( " + CurrentVersion + " ) ";
+                                 UpdateMSG.Replace(",", ".");
+                                 Settings.Default.UpdateMessage = UpdateMSG;
+                                 Settings.Default.UpdateAvailable = false;
+                                 Settings.Default.Save();
+                             }
+
                          }
-                         else if (Settings.Default.UpdatePGShow == false && Settings.Default.CheckforUpdateTag == false)
+                         else
                          {
-                             // Do Nothing in Startup Event
-                         }
-                         else if (Settings.Default.UpdatePGShow == true && Settings.Default.CheckforUpdateTag == false)
-                         {
-                             UpdateWindow UpdatePG = new UpdateWindow();
-                             UpdatePG.ShowDialog();
+                             string UpdateMSG = "Already Up-To-Date :D" + " ( " + CurrentVersion + " ) ";
+                             UpdateMSG.Replace(",", ".");
+                             Settings.Default.UpdateMessage = UpdateMSG;
+                             Settings.Default.UpdateAvailable = false;
+                             Settings.Default.Save();
                          }
                      }
+                     UpdateWindow updatepg = new UpdateWindow();
+                     updatepg.ShowDialog();
+                 }
+                 else if (Settings.Default.CheckforUpdateTag == false && Settings.Default.UpdatePGShow == false)
+                 {
+                     // N/A
+                 }
+                 else if (Settings.Default.CheckforUpdateTag == true && Settings.Default.UpdatePGShow == false)
+                 {
+
+                 }
+                 else if (Settings.Default.CheckforUpdateTag == false && Settings.Default.UpdatePGShow == true)
+                 {
+                     UpdateWindow updatepg = new UpdateWindow();
+                     updatepg.ShowDialog();
                  }
              }).Wait();
 
             // Debug END */
-
         }
     }
 }

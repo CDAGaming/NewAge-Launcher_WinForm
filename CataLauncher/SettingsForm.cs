@@ -28,11 +28,18 @@ using System.Text;
 using System.Windows.Forms;
 using NewAgeLauncher.Properties;
 using System.Diagnostics;
+using System.Drawing.Text;
 
 namespace NewAgeLauncher
 {
     public partial class SettingsForm : Form
     {
+
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbfont, uint cbfont, IntPtr pdv, [In] ref uint pcFonts);
+
+        FontFamily ff;
+        Font font;
 
         public SettingsForm()
         {
@@ -40,8 +47,55 @@ namespace NewAgeLauncher
 
         }
 
+        private void loadFont()
+        {
+            byte[] fontArray = Resources.Montserrat_Regular;
+            int dataLength = Resources.Montserrat_Regular.Length;
+
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Regular);
+
+        }
+
+        private void AllocFont(Font f, Control c, float size, Boolean bold)
+        {
+            if (bold)
+            {
+                FontStyle fontStyle = FontStyle.Bold;
+                c.Font = new Font(ff, size, fontStyle);
+            }
+            else
+            {
+                FontStyle fontStyle = FontStyle.Regular;
+                c.Font = new Font(ff, size, fontStyle);
+            }
+
+        }
+
         private void SettingsForm_Load(object sender, EventArgs e)
         {
+            //Custom Fonts
+            loadFont();
+
+            AllocFont(font, this.Transparent_Checkbox, 8, false);
+            AllocFont(font, this.UpdateCheckbox, 8, false);
+            AllocFont(font, this.WoWCache_CheckBox, 8, false);
+            AllocFont(font, this.wowLocationLabel, 8, false);
+            AllocFont(font, this.wowLocationTextBox, 8, false);
 
             TransparencyKey = Color.Lime;
 
@@ -49,16 +103,11 @@ namespace NewAgeLauncher
             {
                 Language_Checkbox.Checked = false;
             }
-            if (Settings.Default.FontAdditionTag == false)
-            {
-                Font_Checkbox.Checked = false;
-            }
 
             wowLocationTextBox.Text = Settings.Default.WowLocation;
             Transparent_Checkbox.Checked = Settings.Default.TransparencyToggle;
             WoWCache_CheckBox.Checked = Settings.Default.WoWCacheToggle;
             Language_Checkbox.Checked = Settings.Default.LanguageChangeTag;
-            Font_Checkbox.Checked = Settings.Default.FontAdditionTag;
             UpdateCheckbox.Checked = Settings.Default.CheckforUpdateTag;
         }
 
@@ -199,17 +248,6 @@ namespace NewAgeLauncher
                 Settings.Default.LanguageChangeTag = false;
             }
 
-            //Font Installation CheckBox
-
-            if (Font_Checkbox.Checked)
-            {
-                Settings.Default.FontAdditionTag = true;
-            }
-            else
-            {
-                Settings.Default.FontAdditionTag = false;
-            }
-
             //Update Checkbox
 
             if (UpdateCheckbox.Checked)
@@ -223,26 +261,6 @@ namespace NewAgeLauncher
 
 
             Settings.Default.Save();
-
-            // Check if Fonts need to be installed and Installs Them
-            if (Settings.Default.FontAdditionTag == true)
-            {
-                DialogResult dr1 = new DialogResult();
-                dr1 = MessageBox.Show("Please accept the Following Font Windows by Clicking Install, Or Click Cancel to Stop Font Install", "IMPORTANT", MessageBoxButtons.OKCancel);
-                if (dr1 == DialogResult.OK)
-                {
-                    Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/bin/etc/Fonts/DroidSans.ttf");
-                    Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/bin/etc/Fonts/DroidSans-Bold.ttf");
-                    Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/bin/etc/Fonts/GODOFWAR.ttf");
-                    Settings.Default.Save();
-                }
-                if (dr1 == DialogResult.Cancel)
-                {
-                    Settings.Default.FontAdditionTag = false;
-                    Settings.Default.Save();
-                }
-
-            }
 
             // Checks if The User Asks to Change Launguage
             // If so, Language Changer.exe is Launched

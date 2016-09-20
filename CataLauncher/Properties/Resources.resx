@@ -130,9 +130,6 @@
   <data name="dbar_available" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dbar_available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DroidSans_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DroidSans-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="play1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -283,9 +280,6 @@
   <data name="Deathwing2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Deathwing2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DroidSans" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DroidSans.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="red_progressbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red_progressbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -303,5 +297,62 @@
   </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUs_Hovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUs_Hovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUs_NoHovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUs_NoHovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contribute_Hovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contribute_Hovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contribute_NoHovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contribute_NoHovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fb_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fb_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forum_Hovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forum_Hovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forum_NoHovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forum_NoHovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Montserrat_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montserrat-Bold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Montserrat_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montserrat-Light.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Montserrat_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montserrat-Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Play_Hovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_Hovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play_NoHovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_NoHovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings_Hovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_Hovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings_NoHovor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_NoHovor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yt_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yt_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DroidSans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DroidSans.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DroidSans_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DroidSans-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

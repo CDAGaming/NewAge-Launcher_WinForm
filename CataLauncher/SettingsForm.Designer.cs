@@ -40,7 +40,6 @@
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.MinimizePictureBox = new System.Windows.Forms.PictureBox();
             this.Language_Checkbox = new System.Windows.Forms.CheckBox();
-            this.Font_Checkbox = new System.Windows.Forms.CheckBox();
             this.UpdateCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.canc_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_button)).BeginInit();
@@ -71,7 +70,7 @@
             // 
             this.canc_button.BackColor = System.Drawing.Color.Transparent;
             this.canc_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.canc_button.Image = global::NewAgeLauncher.Properties.Resources.Cancel_NEW;
+            this.canc_button.Image = global::NewAgeLauncher.Properties.Resources.cancel;
             resources.ApplyResources(this.canc_button, "canc_button");
             this.canc_button.Name = "canc_button";
             this.canc_button.TabStop = false;
@@ -155,14 +154,6 @@
             this.Language_Checkbox.Name = "Language_Checkbox";
             this.Language_Checkbox.UseVisualStyleBackColor = false;
             // 
-            // Font_Checkbox
-            // 
-            resources.ApplyResources(this.Font_Checkbox, "Font_Checkbox");
-            this.Font_Checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.Font_Checkbox.ForeColor = System.Drawing.Color.White;
-            this.Font_Checkbox.Name = "Font_Checkbox";
-            this.Font_Checkbox.UseVisualStyleBackColor = false;
-            // 
             // UpdateCheckbox
             // 
             resources.ApplyResources(this.UpdateCheckbox, "UpdateCheckbox");
@@ -178,7 +169,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::NewAgeLauncher.Properties.Resources.BG;
             this.Controls.Add(this.UpdateCheckbox);
-            this.Controls.Add(this.Font_Checkbox);
             this.Controls.Add(this.Language_Checkbox);
             this.Controls.Add(this.exitPictureBox);
             this.Controls.Add(this.MinimizePictureBox);
@@ -217,7 +207,6 @@
         private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.PictureBox MinimizePictureBox;
         private System.Windows.Forms.CheckBox Language_Checkbox;
-        private System.Windows.Forms.CheckBox Font_Checkbox;
         private System.Windows.Forms.CheckBox UpdateCheckbox;
     }
 }

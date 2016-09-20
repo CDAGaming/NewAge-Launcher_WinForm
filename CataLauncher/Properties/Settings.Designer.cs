@@ -91,7 +91,7 @@ namespace NewAgeLauncher.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://wownewage.com/vote")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wownewage.com/gate/modules/vote")]
         public string VoteUrl {
             get {
                 return ((string)(this["VoteUrl"]));
@@ -100,7 +100,7 @@ namespace NewAgeLauncher.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://wownewage.com/donate")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://paypal.me/wownewage")]
         public string DonateUrl {
             get {
                 return ((string)(this["DonateUrl"]));

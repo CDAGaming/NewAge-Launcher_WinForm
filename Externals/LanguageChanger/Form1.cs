@@ -127,15 +127,15 @@ namespace LaunguageChanger
                     {
                         Settings.Default.LanguageChangeTag = false;
                     }
-                    if(Settings_ES.Default.LanguageChangeTag == true)
+                    /*if(Settings_ES.Default.LanguageChangeTag == true)
                     {
                         Settings_ES.Default.LanguageChangeTag = false;
-                    }
+                    }*/
 
                     // Saves All Current LAunguage Settings
 
                     Settings.Default.Save();
-                    Settings_ES.Default.Save();
+                    //Settings_ES.Default.Save();
 
                     if (MessageBox.Show("Launguage is Now" + Properties.Settings.Default.LaunguageChange + ", Click OK to Finish Patching", "Success", MessageBoxButtons.OK) == DialogResult.OK)
                     {
@@ -204,15 +204,15 @@ namespace LaunguageChanger
                         {
                             Settings.Default.LanguageChangeTag = false;
                         }
-                        if (Settings_ES.Default.LanguageChangeTag == true)
+                        /*if (Settings_ES.Default.LanguageChangeTag == true)
                         {
                             Settings_ES.Default.LanguageChangeTag = false;
-                        }
+                        }*/
 
                         // Saves All Current Launguage Settings
 
                         Settings.Default.Save();
-                        Settings_ES.Default.Save();
+                        //Settings_ES.Default.Save();
 
                         if (MessageBox.Show("Launguage is Now" + Properties.Settings.Default.LaunguageChange + ", Click OK to Finish Patching", "Success", MessageBoxButtons.OK) == DialogResult.OK)
                         {

@@ -25,13 +25,13 @@ version: 1.0.{build}
 branches:
   only:
   - master
-install:
- - git submodule update --init --recursive
+##install:
+## - git submodule update --init --recursive
 build:
   project: NewAgeLauncher.sln
   verbosity: minimal
 deploy:
 - provider: GitHub
-  release: V1.0.2.1
+  release: V1.0.2.7
   auth_token:
     secure: AaRUijs5QwQRA0b/D0OvrqvJVeTIBxH7Q5SWBobG71eBxDK5LzwHqx6lJnsjyZ1a

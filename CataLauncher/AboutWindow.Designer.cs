@@ -40,11 +40,15 @@
             this.CloseMinimizePanel = new System.Windows.Forms.TableLayoutPanel();
             this.MinimizePictureBox = new System.Windows.Forms.PictureBox();
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
+            this.fbButton = new System.Windows.Forms.PictureBox();
+            this.YoutubeButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewAgeIMG)).BeginInit();
             this.CloseMinimizePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fbButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YoutubeButton)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBar1
@@ -118,7 +122,7 @@
             this.Licenselbl.BackColor = System.Drawing.Color.Transparent;
             this.Licenselbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Licenselbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.Licenselbl.Location = new System.Drawing.Point(9, 261);
+            this.Licenselbl.Location = new System.Drawing.Point(142, 261);
             this.Licenselbl.Name = "Licenselbl";
             this.Licenselbl.Size = new System.Drawing.Size(70, 30);
             this.Licenselbl.TabIndex = 6;
@@ -180,6 +184,28 @@
             this.exitPictureBox.TabStop = false;
             this.exitPictureBox.Click += new System.EventHandler(this.exitPictureBox_Click);
             // 
+            // fbButton
+            // 
+            this.fbButton.BackColor = System.Drawing.Color.Transparent;
+            this.fbButton.BackgroundImage = global::NewAgeLauncher.Properties.Resources.fb;
+            this.fbButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fbButton.Location = new System.Drawing.Point(12, 261);
+            this.fbButton.Name = "fbButton";
+            this.fbButton.Size = new System.Drawing.Size(30, 30);
+            this.fbButton.TabIndex = 77;
+            this.fbButton.TabStop = false;
+            // 
+            // YoutubeButton
+            // 
+            this.YoutubeButton.BackColor = System.Drawing.Color.Transparent;
+            this.YoutubeButton.BackgroundImage = global::NewAgeLauncher.Properties.Resources.yt;
+            this.YoutubeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.YoutubeButton.Location = new System.Drawing.Point(48, 261);
+            this.YoutubeButton.Name = "YoutubeButton";
+            this.YoutubeButton.Size = new System.Drawing.Size(30, 30);
+            this.YoutubeButton.TabIndex = 78;
+            this.YoutubeButton.TabStop = false;
+            // 
             // AboutWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +213,8 @@
             this.BackgroundImage = global::NewAgeLauncher.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(300, 300);
+            this.Controls.Add(this.YoutubeButton);
+            this.Controls.Add(this.fbButton);
             this.Controls.Add(this.CloseMinimizePanel);
             this.Controls.Add(this.Changeslbl);
             this.Controls.Add(this.Licenselbl);
@@ -207,6 +235,8 @@
             this.CloseMinimizePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fbButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YoutubeButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +254,7 @@
         private System.Windows.Forms.TableLayoutPanel CloseMinimizePanel;
         private System.Windows.Forms.PictureBox MinimizePictureBox;
         private System.Windows.Forms.PictureBox exitPictureBox;
+        private System.Windows.Forms.PictureBox fbButton;
+        private System.Windows.Forms.PictureBox YoutubeButton;
     }
 }

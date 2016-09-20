@@ -213,6 +213,12 @@
     <Compile Include="CataButton.Designer.cs">
       <DependentUpon>CataButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contribute_MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contribute_MainWindow.Designer.cs">
+      <DependentUpon>Contribute_MainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="DownloadBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CataButton.resx">
       <DependentUpon>CataButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contribute_MainWindow.resx">
+      <DependentUpon>Contribute_MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadBar.resx">
       <DependentUpon>DownloadBar.cs</DependentUpon>
@@ -346,6 +355,15 @@
     <None Include="Resources\MinimizeButton-NoHover.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Montserrat-Bold.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Montserrat-Light.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Montserrat-Regular.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Play-No-Hover.png" />
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +389,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="catalogo_0YD_icon.ico" />
+    <None Include="Resources\yt_hover.png" />
+    <None Include="Resources\yt.png" />
+    <None Include="Resources\Settings_NoHovor.png" />
+    <None Include="Resources\Settings_Hovor.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Play_NoHovor.png" />
+    <None Include="Resources\Play_Hovor.png" />
+    <None Include="Resources\Forum_NoHovor.png" />
+    <None Include="Resources\Forum_Hovor.png" />
+    <None Include="Resources\fb_hover.png" />
+    <None Include="Resources\fb.png" />
+    <None Include="Resources\Contribute_NoHovor.png" />
+    <None Include="Resources\Contribute_Hovor.png" />
     <None Include="Resources\logo2.png" />
     <None Include="Resources\Squirrel.pdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -414,28 +445,21 @@
     <None Include="Resources\DeltaCompressionDotNet.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Settings_Hovor.png" />
-    <None Include="Resources\Settings_NoHovor.png" />
     <None Include="Resources\Play_NoHovor2.png" />
-    <None Include="Resources\Forum_Hovor.png" />
-    <None Include="Resources\Forum_NoHovor.png" />
     <None Include="Resources\Donate_Hovor.png" />
     <None Include="Resources\Donate_NoHovor.png" />
     <None Include="Resources\NoHovor.png" />
-    <None Include="Resources\Play_Hovor.png" />
     <None Include="Resources\Play_NoHovor1.png" />
-    <None Include="Resources\Play_NoHovor.png" />
     <None Include="Resources\MySql.Data.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\save.png" />
-    <None Include="Resources\browse.png" />
-    <None Include="Resources\cancel.png" />
     <None Include="Resources\BG %284%29.png" />
     <None Include="Resources\Cancel%28NEW%29.png" />
-    <None Include="Resources\AboutUs_NoHovor.png" />
-    <None Include="Resources\AboutUs_Hovor.png" />
     <None Include="Resources\CataLogo1.png" />
+    <None Include="Resources\AboutUs_Hovor.png" />
+    <None Include="Resources\AboutUs_NoHovor.png" />
+    <None Include="Resources\Browse.png" />
+    <None Include="Resources\Cancel.png" />
     <Content Include="Resources\catalogo_0YD_icon.ico" />
     <None Include="Resources\logo1.png" />
     <None Include="Resources\logo.png" />

@@ -67,8 +67,8 @@ namespace NewAgeLauncher
 
         private void loadFont()
         {
-            byte[] fontArray = Resources.DroidSans;
-            int dataLength = Resources.DroidSans.Length;
+            byte[] fontArray = Resources.Montserrat_Regular;
+            int dataLength = Resources.Montserrat_Regular.Length;
 
             IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
 
@@ -85,7 +85,7 @@ namespace NewAgeLauncher
             Marshal.FreeCoTaskMem(ptrData);
 
             ff = pfc.Families[0];
-            font = new Font(ff, 15f, FontStyle.Bold);
+            font = new Font(ff, 15f, FontStyle.Regular);
 
         }
 
@@ -103,25 +103,6 @@ namespace NewAgeLauncher
             }
 
         }
-
-        // CREATE SHORTCUT
-
-        /*  private void appShortcutToDesktop(string linkName)
-          {
-              string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-
-              using (StreamWriter writer = new StreamWriter(deskDir + "\\" + linkName + ".url"))
-              {
-                  string app = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                  writer.WriteLine("[InternetShortcut]");
-                  writer.WriteLine("URL=file:///" + app);
-                  writer.WriteLine("IconIndex=0");
-                  string icon = app.Replace('\\', '/');
-                  writer.WriteLine("IconFile=" + icon);
-                  writer.Flush();
-              }
-          }
-          */
 
         private void exitPictureBox_MouseEnter(object sender, EventArgs e)
         {
@@ -156,24 +137,24 @@ namespace NewAgeLauncher
         // ===================
         private void playButtonPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            playButtonPictureBox.Image = Resources_US.Play_Hovor;
+            playButtonPictureBox.Image = Resources.Play_Hovor;
             Cursor = Cursors.Hand;
         }
 
         private void playButtonPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            playButtonPictureBox.Image = Resources_US.Play_NoHovor2;
+            playButtonPictureBox.Image = Resources.Play_NoHovor;
             Cursor = Cursors.Arrow;
         }
 
         private void playButtonPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            playButtonPictureBox.Image = Resources_US.Play_Hovor;
+            playButtonPictureBox.Image = Resources.Play_Hovor;
         }
 
         private void playButtonPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            playButtonPictureBox.Image = Resources_US.Play_Hovor;
+            playButtonPictureBox.Image = Resources.Play_Hovor;
         }
         // ===================
 
@@ -181,99 +162,91 @@ namespace NewAgeLauncher
 
         private void settingsButtonPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            //MessageBox.Show("mouse enter");
-            settingsButtonPictureBox.Image = Resources_US.Settings_Hovor;
+            settingsButtonPictureBox.Image = Resources.Settings_Hovor;
             Cursor = Cursors.Hand;
         }
 
         private void settingsButtonPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            settingsButtonPictureBox.Image = Resources_US.Settings_NoHovor;
+            settingsButtonPictureBox.Image = Resources.Settings_NoHovor;
             Cursor = Cursors.Arrow;
         }
 
         private void settingsButtonPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            settingsButtonPictureBox.Image = Resources_US.Settings_Hovor;
+            settingsButtonPictureBox.Image = Resources.Settings_Hovor;
         }
 
         private void settingsButtonPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            settingsButtonPictureBox.Image = Resources_US.Settings_Hovor;
+            settingsButtonPictureBox.Image = Resources.Settings_Hovor;
         }
 
-        // ===================
-
-        // ===================
         private void donateButtonPictureBox_MouseEnter(object sender, EventArgs e)
         {
             //MessageBox.Show("mouse enter");
-            donateButtonPictureBox.Image = Resources_US.Donate_Hovor;
+            donateButtonPictureBox.Image = Resources.Contribute_Hovor;
             Cursor = Cursors.Hand;
         }
 
         private void donateButtonPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            donateButtonPictureBox.Image = Resources_US.Donate_NoHovor;
+            donateButtonPictureBox.Image = Resources.Contribute_NoHovor;
             Cursor = Cursors.Arrow;
         }
 
         private void donateButtonPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            donateButtonPictureBox.Image = Resources_US.Donate_Hovor;
+            donateButtonPictureBox.Image = Resources.Contribute_Hovor;
         }
 
         private void donateButtonPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            donateButtonPictureBox.Image = Resources_US.Donate_Hovor;
+            donateButtonPictureBox.Image = Resources.Contribute_Hovor;
         }
-        // ===================
 
-        // ===================
         private void aboutUsButtonPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            aboutUsButtonPictureBox.Image = Resources_US.AboutUs_Hovor;
+            aboutUsButtonPictureBox.Image = Resources.AboutUs_Hovor;
             Cursor = Cursors.Hand;
         }
 
         private void aboutUsButtonPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            aboutUsButtonPictureBox.Image = Resources_US.AboutUs_NoHovor;
+            aboutUsButtonPictureBox.Image = Resources.AboutUs_NoHovor;
             Cursor = Cursors.Arrow;
         }
 
         private void aboutUsButtonPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            aboutUsButtonPictureBox.Image = Resources_US.AboutUs_Hovor;
+            aboutUsButtonPictureBox.Image = Resources.AboutUs_Hovor;
         }
 
         private void aboutUsButtonPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            aboutUsButtonPictureBox.Image = Resources_US.AboutUs_Hovor;
+            aboutUsButtonPictureBox.Image = Resources.AboutUs_Hovor;
         }
-        // ===================
 
-        // ===================
         private void forumButtonPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            forumButtonPictureBox.Image = Resources_US.Forum_Hovor;
+            forumButtonPictureBox.Image = Resources.Forum_Hovor;
             Cursor = Cursors.Hand;
         }
 
         private void forumButtonPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            forumButtonPictureBox.Image = Resources_US.Forum_NoHovor;
+            forumButtonPictureBox.Image = Resources.Forum_NoHovor;
             Cursor = Cursors.Arrow;
         }
 
         private void forumButtonPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            forumButtonPictureBox.Image = Resources_US.Forum_Hovor;
+            forumButtonPictureBox.Image = Resources.Forum_Hovor;
         }
 
         private void forumButtonPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            forumButtonPictureBox.Image = Resources_US.Forum_Hovor;
+            forumButtonPictureBox.Image = Resources.Forum_Hovor;
         }
         // ===================
 
@@ -312,7 +285,7 @@ namespace NewAgeLauncher
             else
             {
                 File.Copy(Settings.Default.WowLocation + "\\data\\wow.mpq", Settings.Default.WowLocation + "\\wow_mod.exe");
-                MessageBox.Show(this, "Could not find WoW_mod.exe! Launcher just restored a backup of wow_mod.exe", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show(this, "Could not find WoW_mod.exe! Launcher just restored a backup of wow_mod.exe", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -322,22 +295,43 @@ namespace NewAgeLauncher
 
         private readonly string tempPath = Path.GetTempFileName();
 
+        private async void ServerConnect()
+        {
+            //=============Server Connectivity============\\
+
+            bool status = false;
+            statusLabel.Text = "Waiting";
+            statusLabel.ForeColor = Color.Gray;
+
+            using (TcpClient client = new TcpClient())
+            {
+
+                // Checks if it can Connect to Core, Based on Server Address & Port
+
+                await client.ConnectAsync(Settings.Default.server, Settings.Default.port);
+
+                status = client.Connected;
+
+
+                if (status == true)
+                {
+                    statusLabel.ForeColor = Color.Green;
+                    statusLabel.Text = "Online";
+                }
+                else if (status == false)
+                {
+                    statusLabel.ForeColor = Color.Red;
+                    statusLabel.Text = "Offline";
+                }
+            }
+
+            //============================================\\
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Detect if Launguage Change is needed
-            // Duplicate Code
-
-            /*
-            if (Settings.Default.LaunguageSet == true)
-            {
-                Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/bin/Launguage Changer.exe");
-                WindowState = FormWindowState.Minimized;
-            }
-            else
-            {
-                // N/A
-            }
-            */
+            //SERVER Connection
+            ServerConnect();
 
             // Transparency Toggle(SettingsForm.cs)
 
@@ -350,8 +344,10 @@ namespace NewAgeLauncher
                 Opacity = .90;
             }
 
-            // LOAD FONT
+            // LOAD CUSTOM FONT
             loadFont();
+
+            //Alloc Font
             AllocFont(font, this.News_Item1_Title, 12, true);
             AllocFont(font, this.News_Item2_Title, 12, true);
             AllocFont(font, this.News_Item3_Title, 12, true);
@@ -371,16 +367,7 @@ namespace NewAgeLauncher
 
             AllocFont(font, this.updatesLabel, 16, false);
 
-
-
-
-            /* string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-             if (!System.IO.File.Exists(Path.Combine(desktopPath, "Launcher.lnk")))
-             {
-                 string startMenu = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu);
-                 File.Copy(Path.Combine(Directory, @"Programs\Launcher\Launcher.lnk"), )//CREATE DESKTOP SHORTCUT
-             }
-             */
+            AllocFont(font, this.menuBar1, 14, false);
 
             //========================================= GET TITLE FROM DATABASE SECTION ================================================
             MySqlConnection conn;
@@ -442,103 +429,71 @@ namespace NewAgeLauncher
             //SET TITLE AND CONTENT SECTION
             News_Item1_Title.Text = titleContent[0];
             Item1_Description.Text = contentContent[0];
-            UpdateBox1.ImageLocation = ImgLinkContent[0];
+            if (string.IsNullOrEmpty(ImgLinkContent[0]))
+            {
+                UpdateBox1.Visible = false;
+            }
+            else
+            {
+                UpdateBox1.ImageLocation = ImgLinkContent[0];
+            }
 
             News_Item2_Title.Text = titleContent[1];
             Item2_Description.Text = contentContent[1];
-            UpdateBox2.ImageLocation = ImgLinkContent[1];
+            if (string.IsNullOrEmpty(ImgLinkContent[1]))
+            {
+                UpdateBox2.Visible = false;
+            }
+            else
+            {
+                UpdateBox2.ImageLocation = ImgLinkContent[1];
+            }
 
             News_Item3_Title.Text = titleContent[2];
             Item3_Description.Text = contentContent[2];
-            UpdateBox3.ImageLocation = ImgLinkContent[2];
+            if (string.IsNullOrEmpty(ImgLinkContent[2]))
+            {
+                UpdateBox3.Visible = false;
+            }
+            else
+            {
+                UpdateBox3.ImageLocation = ImgLinkContent[2];
+            }
 
             News_Item4_Title.Text = titleContent[3];
             Item4_Description.Text = contentContent[3];
-            UpdateBox4.ImageLocation = ImgLinkContent[3];
+            if (string.IsNullOrEmpty(ImgLinkContent[3]))
+            {
+                UpdateBox4.Visible = false;
+            }
+            else
+            {
+                UpdateBox4.ImageLocation = ImgLinkContent[3];
+            }
 
             News_Item5_Title.Text = titleContent[4];
             Item5_Description.Text = contentContent[4];
-            UpdateBox5.ImageLocation = ImgLinkContent[4];
+            if(string.IsNullOrEmpty(ImgLinkContent[4]))
+            {
+                UpdateBox5.Visible = false;
+            }
+            else
+            {
+                UpdateBox5.ImageLocation = ImgLinkContent[4];
+            }
 
             News_Item6_Title.Text = titleContent[5];
             Item6_Description.Text = contentContent[5];
-            UpdateBox6.ImageLocation = ImgLinkContent[5];
+            if (string.IsNullOrEmpty(ImgLinkContent[5]))
+            {
+                UpdateBox6.Visible = false;
+            }
+            else
+            {
+                UpdateBox6.ImageLocation = ImgLinkContent[5];
+            }
 
             // END UPDATES SECTION =====================================
-
-            /*
-            int btnCtr = 0;
-
-                if (!string.IsNullOrEmpty(Settings.Default.WebsiteUrl))
-                {
-
-                    CataButton btn = new CataButton();
-                    btn.Size = new Size(97, 39);
-                    btn.Name = "webButton";
-                    btn.ButtonText = "Website";
-                    btn.Location = new Point((97 * btnCtr) + 25, 469);
-                    btn.Click += (s, args) => Process.Start(Settings.Default.WebsiteUrl);
-
-                    Controls.Add(btn);
-
-                    btn.BringToFront();
-
-                    btnCtr++;
-
-                }
-
-                if (!string.IsNullOrEmpty(Settings.Default.ForumsUrl))
-                {
-
-                    CataButton btn = new CataButton();
-                    btn.Size = new Size(97, 39);
-                    btn.Name = "frmButton";
-                    btn.ButtonText = "Forums";
-                    btn.Location = new Point((97 * btnCtr) + 25, 469);
-                    btn.Click += (s, args) => Process.Start(Settings.Default.ForumsUrl);
-
-                    Controls.Add(btn);
-
-                    btn.BringToFront();
-
-                    btnCtr++;
-
-                }
-
-                if (!string.IsNullOrEmpty(Settings.Default.VoteUrl))
-                {
-
-                    CataButton btn = new CataButton();
-                    btn.Size = new Size(97, 39);
-                    btn.Name = "voteBtn";
-                    btn.ButtonText = "Vote";
-                    btn.Location = new Point((97 * btnCtr) + 25, 469);
-                    btn.Click += (s, args) => Process.Start(Settings.Default.VoteUrl);
-
-                    Controls.Add(btn);
-
-                    btn.BringToFront();
-
-                    btnCtr++;
-
-                }
-
-                if (!string.IsNullOrEmpty(Settings.Default.DonateUrl))
-                {
-
-                    CataButton btn = new CataButton();
-                    btn.Size = new Size(97, 39);
-                    btn.Name = "donateBtn";
-                    btn.ButtonText = "Donate";
-                    btn.Location = new Point((97 * btnCtr) + 25, 469);
-                    btn.Click += (s, args) => Process.Start(Settings.Default.DonateUrl);
-
-                    Controls.Add(btn);
-
-                    btn.BringToFront();
-
-                }
-                */
 
             if (string.IsNullOrEmpty(Settings.Default.WowLocation) || !Directory.Exists(Settings.Default.WowLocation))
             {
@@ -605,7 +560,7 @@ namespace NewAgeLauncher
 
                 try
                 {
-                    // Start downloading the file
+                    // Start Downloading the File / Patch
                     client.DownloadFileAsync(new Uri(Settings.Default.patchDownloadURL), tempPath);
                 }
                 catch (Exception ex)
@@ -617,12 +572,6 @@ namespace NewAgeLauncher
 
         private void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-
-            //================
-
-            // downloadSpeedLabel.Text = text_speed;
-
-            //===============
             this.Invoke(new UpdateProgress(UpdateProgressbar), new object[] { e.ProgressPercentage, e.BytesReceived, e.TotalBytesToReceive, sw.Elapsed.TotalSeconds });
         }
 
@@ -663,14 +612,9 @@ namespace NewAgeLauncher
                 speed = String.Format("{0} KB/s", (bytesReceived / 1024d / time).ToString("0.00"));
             }
 
-            //MessageBox.Show(speed);
 
             downloadSpeedLabel.Text = speed;
-            //downloadSpeedLabel.Refresh();
-            //MessageBox.Show("received bytes: " + (bytesReceived + " Elapsed seconds: " + sw.Elapsed.TotalSeconds + " speed: " + bytesReceived/time));
-
             downloadProgressLabel.Text = progress;
-
             downloadBar1.Value = percent;
         }
 
@@ -838,35 +782,7 @@ namespace NewAgeLauncher
 
         private void checkServerStatusBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            bool status = false;
-
-            using (TcpClient client = new TcpClient())
-            {
-                try
-                {
-                    client.Connect(Settings.Default.server, Settings.Default.port);
-
-                    status = true;
-                }
-                catch (Exception)
-                {
-                    status = false;
-                }
-            }
-
-            statusLabel.Invoke((MethodInvoker)delegate
-            {
-                if (status)
-                {
-                    statusLabel.ForeColor = Color.LimeGreen;
-                    statusLabel.Text = "Online";
-                }
-                else
-                {
-                    statusLabel.ForeColor = Color.IndianRed;
-                    statusLabel.Text = "Offline";
-                }
-            });
+            
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -940,7 +856,8 @@ namespace NewAgeLauncher
 
         private void donateButtonPictureBox_Click(object sender, EventArgs e)
         {
-            Process.Start("http://wownewage.com/donate");
+            Contribute_MainWindow contributeform = new Contribute_MainWindow();
+            contributeform.ShowDialog();
         }
 
         private void aboutUsButtonPictureBox_Click(object sender, EventArgs e)

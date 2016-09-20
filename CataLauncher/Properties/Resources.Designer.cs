@@ -83,6 +83,26 @@ namespace NewAgeLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AboutUs_Hovor {
+            get {
+                object obj = ResourceManager.GetObject("AboutUs_Hovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AboutUs_NoHovor {
+            get {
+                object obj = ResourceManager.GetObject("AboutUs_NoHovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG {
             get {
                 object obj = ResourceManager.GetObject("BG", resourceCulture);
@@ -126,6 +146,26 @@ namespace NewAgeLauncher.Properties {
         internal static System.Drawing.Bitmap CataLogo {
             get {
                 object obj = ResourceManager.GetObject("CataLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Contribute_Hovor {
+            get {
+                object obj = ResourceManager.GetObject("Contribute_Hovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Contribute_NoHovor {
+            get {
+                object obj = ResourceManager.GetObject("Contribute_NoHovor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +336,26 @@ namespace NewAgeLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fb {
+            get {
+                object obj = ResourceManager.GetObject("fb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fb_hover {
+            get {
+                object obj = ResourceManager.GetObject("fb_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forum {
             get {
                 object obj = ResourceManager.GetObject("forum", resourceCulture);
@@ -309,6 +369,26 @@ namespace NewAgeLauncher.Properties {
         internal static System.Drawing.Bitmap forum_hover {
             get {
                 object obj = ResourceManager.GetObject("forum_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Forum_Hovor {
+            get {
+                object obj = ResourceManager.GetObject("Forum_Hovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Forum_NoHovor {
+            get {
+                object obj = ResourceManager.GetObject("Forum_NoHovor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -478,6 +558,36 @@ namespace NewAgeLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Montserrat_Bold {
+            get {
+                object obj = ResourceManager.GetObject("Montserrat_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Montserrat_Light {
+            get {
+                object obj = ResourceManager.GetObject("Montserrat_Light", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Montserrat_Regular {
+            get {
+                object obj = ResourceManager.GetObject("Montserrat_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] NuGet_Squirrel {
             get {
                 object obj = ResourceManager.GetObject("NuGet_Squirrel", resourceCulture);
@@ -531,6 +641,26 @@ namespace NewAgeLauncher.Properties {
         internal static System.Drawing.Bitmap play_hover1 {
             get {
                 object obj = ResourceManager.GetObject("play_hover1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play_Hovor {
+            get {
+                object obj = ResourceManager.GetObject("Play_Hovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play_NoHovor {
+            get {
+                object obj = ResourceManager.GetObject("Play_NoHovor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -611,6 +741,26 @@ namespace NewAgeLauncher.Properties {
         internal static System.Drawing.Bitmap settings_hover {
             get {
                 object obj = ResourceManager.GetObject("settings_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_Hovor {
+            get {
+                object obj = ResourceManager.GetObject("Settings_Hovor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_NoHovor {
+            get {
+                object obj = ResourceManager.GetObject("Settings_NoHovor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -701,6 +851,26 @@ namespace NewAgeLauncher.Properties {
         internal static System.Drawing.Bitmap yellow_progressbar {
             get {
                 object obj = ResourceManager.GetObject("yellow_progressbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yt {
+            get {
+                object obj = ResourceManager.GetObject("yt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yt_hover {
+            get {
+                object obj = ResourceManager.GetObject("yt_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
